@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../app/routes/jokes/$jokeId.tsx"],
+  "sourcesContent": ["import type { LoaderFunction } from \"@remix-run/node\";\nimport { json } from \"@remix-run/node\";\nimport { Link, useLoaderData } from \"@remix-run/react\";\nimport type { Joke } from \"@prisma/client\";\n\nimport { db } from \"~/utils/db.server\";\n\ntype LoaderData = { joke: Joke };\n\nexport const loader: LoaderFunction = async ({\n  params,\n}) => {\n  const joke = await db.joke.findUnique({\n    where: { id: params.jokeId },\n  });\n  if (!joke) throw new Error(\"Joke not found\");\n  const data: LoaderData = { joke };\n  return json(data);\n};\n\n\nconst Index = () => {\n  const data = useLoaderData<LoaderData>();\n  return (\n    <div>\n      <p>Here's your hilarious joke:</p>\n      <p>{data.joke.content}</p>\n      <Link to=\".\">{data.joke.name} Permalink</Link>\n    </div>\n  );\n}\n\nexport default Index;"],
+  "mappings": ";;;;;;;;;;;AAKA,gBAAmB;AALnB;AAqBA,IAAM,QAAQ,MAAM;AAClB,QAAM,OAAO,cAA0B;AACvC,SACE,mDAAC;AAAA,IACC;AAAA,yDAAC;AAAA,QAAE;AAAA,SAAH;AAAA;AAAA;AAAA;AAAA,aAA8B;AAAA,MAC9B,mDAAC;AAAA,QAAG,eAAK,KAAK;AAAA,SAAd;AAAA;AAAA;AAAA;AAAA,aAAsB;AAAA,MACtB,mDAAC;AAAA,QAAK,IAAG;AAAA,QAAK;AAAA,eAAK,KAAK;AAAA,UAAK;AAAA;AAAA,SAA7B;AAAA;AAAA;AAAA;AAAA,aAAuC;AAAA;AAAA,KAHzC;AAAA;AAAA;AAAA;AAAA,SAIA;AAEJ;AAEA,IAAO,iBAAQ;",
+  "names": []
+}
