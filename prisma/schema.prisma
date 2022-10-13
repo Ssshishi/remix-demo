@@ -11,9 +11,9 @@ datasource db {
 }
 
 model Joke {
-  id String @id @default(uuid())
+  id       String   @id @default(uuid())
   createAt DateTime @default(now())
   updateAt DateTime @default(now())
-  name String
-  content String
+  name     String
+  content  String
 }
