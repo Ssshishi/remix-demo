@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../app/routes/index.tsx"],
-  "sourcesContent": ["import type { LinksFunction } from '@remix-run/node'\nimport { Link } from \"@remix-run/react\";\n\nimport stylesUrl from \"../styles/index.css\";\n\nexport const links: LinksFunction = () => {\n  return [{rel: \"stylesheet\", href: stylesUrl}]\n}\n\nexport default () => {\n  return (\n    <div className=\"container\">\n      <div className=\"content\">\n        <h1>\n          Remix <span>Jokes!</span>\n        </h1>\n        <nav>\n          <ul>\n            <li>\n              <Link to=\"jokes\">Read Jokes</Link>\n            </li>\n          </ul>\n        </nav>\n      </div>\n    </div>\n  );\n}"],
-  "mappings": ";;;;;;;;;;AAAA;AAKO,IAAM,QAAuB,MAAM;AACxC,SAAO,CAAC,EAAC,KAAK,cAAc,MAAM,eAAS,CAAC;AAC9C;AAEA,IAAO,iBAAQ,MAAM;AACnB,SACE,mDAAC;AAAA,IAAI,WAAU;AAAA,IACb,6DAAC;AAAA,MAAI,WAAU;AAAA,MACb;AAAA,2DAAC;AAAA,UAAG;AAAA;AAAA,YACI,mDAAC;AAAA,cAAK;AAAA,eAAN;AAAA;AAAA;AAAA;AAAA,mBAAY;AAAA;AAAA,WADpB;AAAA;AAAA;AAAA;AAAA,eAEA;AAAA,QACA,mDAAC;AAAA,UACC,6DAAC;AAAA,YACC,6DAAC;AAAA,cACC,6DAAC;AAAA,gBAAK,IAAG;AAAA,gBAAQ;AAAA,iBAAjB;AAAA;AAAA;AAAA;AAAA,qBAA2B;AAAA,eAD7B;AAAA;AAAA;AAAA;AAAA,mBAEA;AAAA,aAHF;AAAA;AAAA;AAAA;AAAA,iBAIA;AAAA,WALF;AAAA;AAAA;AAAA;AAAA,eAMA;AAAA;AAAA,OAVF;AAAA;AAAA;AAAA;AAAA,WAWA;AAAA,KAZF;AAAA;AAAA;AAAA;AAAA,SAaA;AAEJ;",
-  "names": []
-}

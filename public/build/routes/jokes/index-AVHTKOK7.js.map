@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../app/routes/jokes/index.tsx"],
-  "sourcesContent": ["import type { LoaderFunction } from \"@remix-run/node\";\nimport { json } from \"@remix-run/node\";\nimport { useLoaderData, Link } from \"@remix-run/react\";\nimport type { Joke } from \"@prisma/client\";\n\nimport { db } from \"~/utils/db.server\";\n\ntype LoaderData = { randomJoke: Joke };\n\nexport const loader: LoaderFunction = async () => {\n  const count = await db.joke.count();\n  const randomRowNumber = Math.floor(Math.random() * count);\n  const [randomJoke] = await db.joke.findMany({\n    take: 1,\n    skip: randomRowNumber,\n  });\n  const data: LoaderData = { randomJoke };\n  return json(data);\n};\n\nconst Index = () => {\n  const data = useLoaderData<LoaderData>();\n  return (\n    <div>\n      <p>Here's a random joke:</p>\n      <p>{data.randomJoke.content}</p>\n      <Link to={data.randomJoke.id}>\n        \"{data.randomJoke.name}\" Permalink\n      </Link>\n    </div>\n  )\n}\n\nexport default Index;"],
-  "mappings": ";;;;;;;;;;;AAKA,gBAAmB;AALnB;AAoBA,IAAM,QAAQ,MAAM;AAClB,QAAM,OAAO,cAA0B;AACvC,SACE,mDAAC;AAAA,IACC;AAAA,yDAAC;AAAA,QAAE;AAAA,SAAH;AAAA;AAAA;AAAA;AAAA,aAAwB;AAAA,MACxB,mDAAC;AAAA,QAAG,eAAK,WAAW;AAAA,SAApB;AAAA;AAAA;AAAA;AAAA,aAA4B;AAAA,MAC5B,mDAAC;AAAA,QAAK,IAAI,KAAK,WAAW;AAAA,QAAI;AAAA;AAAA,UAC1B,KAAK,WAAW;AAAA,UAAK;AAAA;AAAA,SADzB;AAAA;AAAA;AAAA;AAAA,aAEA;AAAA;AAAA,KALF;AAAA;AAAA;AAAA;AAAA,SAMA;AAEJ;AAEA,IAAO,gBAAQ;",
-  "names": []
-}
