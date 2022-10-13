@@ -499,20 +499,20 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), loader3 = async (
   return (0, import_node4.json)({ randomJoke });
 }, Index2 = () => {
   let data = (0, import_react6.useLoaderData)();
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
+  return console.log("data.randomJoke", data.randomJoke), /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
     children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("p", {
         children: "Here's a random joke:"
       }, void 0, !1, {
         fileName: "app/routes/jokes/index.tsx",
-        lineNumber: 25,
+        lineNumber: 27,
         columnNumber: 7
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("p", {
         children: data.randomJoke.content
       }, void 0, !1, {
         fileName: "app/routes/jokes/index.tsx",
-        lineNumber: 26,
+        lineNumber: 28,
         columnNumber: 7
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react6.Link, {
@@ -524,13 +524,13 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), loader3 = async (
         ]
       }, void 0, !0, {
         fileName: "app/routes/jokes/index.tsx",
-        lineNumber: 27,
+        lineNumber: 29,
         columnNumber: 7
       }, this)
     ]
   }, void 0, !0, {
     fileName: "app/routes/jokes/index.tsx",
-    lineNumber: 24,
+    lineNumber: 26,
     columnNumber: 5
   }, this);
 }, jokes_default2 = Index2;
@@ -698,7 +698,7 @@ var badRequest = (data) => (0, import_node5.json)(data, { status: 400 }), action
 }, new_default = Index3;
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { version: "9810aeee", entry: { module: "/build/entry.client-3EBNEGCY.js", imports: ["/build/_shared/chunk-3FTNTOIL.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-NBX47NIT.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-CR7KXDIA.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/jokes": { id: "routes/jokes", parentId: "root", path: "jokes", index: void 0, caseSensitive: void 0, module: "/build/routes/jokes-27YQCCCI.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/jokes/$jokeId": { id: "routes/jokes/$jokeId", parentId: "routes/jokes", path: ":jokeId", index: void 0, caseSensitive: void 0, module: "/build/routes/jokes/$jokeId-5FCMUG57.js", imports: ["/build/_shared/chunk-GERDHSEI.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/jokes/index": { id: "routes/jokes/index", parentId: "routes/jokes", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/jokes/index-AVHTKOK7.js", imports: ["/build/_shared/chunk-GERDHSEI.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/jokes/new": { id: "routes/jokes/new", parentId: "routes/jokes", path: "new", index: void 0, caseSensitive: void 0, module: "/build/routes/jokes/new-XQVTP4ML.js", imports: ["/build/_shared/chunk-GERDHSEI.js"], hasAction: !0, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-9810AEEE.js" };
+var assets_manifest_default = { version: "11f1fd3c", entry: { module: "/build/entry.client-3EBNEGCY.js", imports: ["/build/_shared/chunk-3FTNTOIL.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-NBX47NIT.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-CR7KXDIA.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/jokes": { id: "routes/jokes", parentId: "root", path: "jokes", index: void 0, caseSensitive: void 0, module: "/build/routes/jokes-27YQCCCI.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/jokes/$jokeId": { id: "routes/jokes/$jokeId", parentId: "routes/jokes", path: ":jokeId", index: void 0, caseSensitive: void 0, module: "/build/routes/jokes/$jokeId-5FCMUG57.js", imports: ["/build/_shared/chunk-GERDHSEI.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/jokes/index": { id: "routes/jokes/index", parentId: "routes/jokes", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/jokes/index-VG46FT3H.js", imports: ["/build/_shared/chunk-GERDHSEI.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/jokes/new": { id: "routes/jokes/new", parentId: "routes/jokes", path: "new", index: void 0, caseSensitive: void 0, module: "/build/routes/jokes/new-XQVTP4ML.js", imports: ["/build/_shared/chunk-GERDHSEI.js"], hasAction: !0, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-11F1FD3C.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var assetsBuildDirectory = "public/build", publicPath = "/build/", entry = { module: entry_server_exports }, routes = {

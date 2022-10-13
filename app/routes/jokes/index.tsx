@@ -20,6 +20,8 @@ export const loader: LoaderFunction = async () => {
 
 const Index = () => {
   const data = useLoaderData<LoaderData>();
+  console.log('data.randomJoke', data.randomJoke);
+  
   return (
     <div>
       <p>Here's a random joke:</p>
